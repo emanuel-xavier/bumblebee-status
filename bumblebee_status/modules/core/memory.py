@@ -33,9 +33,9 @@ class Module(core.module.Module):
     @property
     def _format(self):
         if util.format.asbool(self.parameter("usedonly", False)):
-            return "{used}"
+            return "   {used}"
         else:
-            return self.parameter("format", "{used}/{total} ({percent:05.02f}%)")
+            return self.parameter("format", "  {used}/{total} ({percent:05.02f}%)")
 
     def memory_usage(self, widget):
         return self._format.format(**self._mem)

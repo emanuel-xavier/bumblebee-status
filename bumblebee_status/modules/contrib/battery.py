@@ -151,11 +151,11 @@ class Module(core.module.Module):
 
         # Read power conumption
         if util.format.asbool(self.parameter("showpowerconsumption", False)):
-            output = "{}% ({})".format(
+            output = " {}% ({})".format(
                 capacity, self.__manager.consumption(widget.name)
             )
         else:
-            output = "{}%".format(capacity)
+            output = " {}%".format(capacity)
 
         if (
             util.format.asbool(self.parameter("showremaining", True))
